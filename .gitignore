@@ -1,0 +1,5 @@
+# Ignorar arquivos temporários, CSVs e credenciais
+*.csv
+*.xlsx
+__pycache__/
+*.env
