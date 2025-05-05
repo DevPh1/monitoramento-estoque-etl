@@ -33,6 +33,19 @@ CREATE TABLE Fornecedores_Produtos (
     FOREIGN KEY (fornecedor_id) REFERENCES Fornecedores(id),
     FOREIGN KEY (produto_id) REFERENCES Produtos(id)
 );
+ 
+CREATE TABLE Regioes (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    nome VARCHAR(50) NOT NULL,
+    descricao VARCHAR(100)
+);
 
+CREATE TABLE Vendas_Regioes (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    venda_id INT NOT NULL,
+    regiao_id INT NOT NULL,
+    FOREIGN KEY (venda_id) REFERENCES Vendas(id) ON DELETE CASCADE,
+    FOREIGN KEY (regiao_id) REFERENCES Regioes(id)
+);
 
 

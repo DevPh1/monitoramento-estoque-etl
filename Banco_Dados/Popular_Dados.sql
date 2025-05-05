@@ -367,3 +367,22 @@ INSERT INTO Fornecedores_Produtos (fornecedor_id, produto_id) VALUES
 (8, 97),
 (9, 98),
 (10, 99);
+
+-- Inserir dados na tabela Regioes
+INSERT INTO Regioes (nome, descricao) VALUES
+('Sudeste', 'São Paulo, Rio de Janeiro, Minas Gerais, Espírito Santo'),
+('Nordeste', 'Bahia, Pernambuco, Ceará, Rio Grande do Norte'),
+('Sul', 'Rio Grande do Sul, Santa Catarina, Paraná'),
+('Centro-Oeste', 'Goiás, Mato Grosso, Mato Grosso do Sul, Distrito Federal'),
+('Norte', 'Amazonas, Pará, Rondônia, Acre');
+
+-- Inserir apenas vendas_id que existem (1 a 132)
+INSERT INTO Vendas_Regioes (venda_id, regiao_id)
+VALUES
+-- Exemplo: Distribuição aleatória por região (1-Sudeste, 2-Nordeste, 3-Sul, 4-Centro-Oeste, 5-Norte)
+(1, 1), (2, 1), (3, 1), (4, 1), (5, 1),   -- Sudeste
+(6, 2), (7, 2), (8, 2), (9, 2), (10, 2),  -- Nordeste
+(11, 3), (12, 3), (13, 3), (14, 3), (15, 3), -- Sul
+(16, 4), (17, 4), (18, 4), (19, 4), (20, 4), -- Centro-Oeste
+(21, 5), (22, 5), (23, 5), (24, 5), (25, 5), -- Norte
+(130, 1), (131, 2), (132, 3);  -- Últimos registros

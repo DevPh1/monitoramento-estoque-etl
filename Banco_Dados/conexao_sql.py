@@ -1,8 +1,8 @@
 import pyodbc
 
-server = r"PEDRO-H\SQLEXPRESS"  # Nome do servidor
-database = "estoque_db"  # Nome do banco de dados (alterar conforme necessário)
-trusted_connection = "yes"  # Usa autenticação do Windows
+server = ""  # Nome do servidor
+database = ""  # Nome do banco de dados (alterar conforme necessário)
+trusted_connection = ""  # Usa autenticação do Windows
 
 conn_str = (
     r'DRIVER={ODBC Driver 17 for SQL Server};'
